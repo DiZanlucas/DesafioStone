@@ -5,9 +5,9 @@ public class ListaDeCompras{
     String item;
     int qtd_item;
     int preco; //considere que 1 real = 100 centavos
-    ArrayList itens = new ArrayList<>();
-    ArrayList quantidade = new ArrayList<>();
-    ArrayList precos = new ArrayList<>();
+    ArrayList<String>itens = new ArrayList<>();
+    ArrayList<Integer>quantidade = new ArrayList<>();
+    ArrayList<Integer>precos = new ArrayList<>();
     
 
     /*ListaDeCompras(String item, int qtd_item, int preco){
@@ -46,10 +46,7 @@ public class ListaDeCompras{
         this.preco = preco;
     }
 
-    public void add(String item, int preco, int qtd_item){ //metodo para adicionar um novo item a lista
-        this.preco = preco;
-        this.item = item;
-        this.qtd_item = qtd_item;
+    public void adicionar(String item, int preco, int qtd_item){ //metodo para adicionar um novo item a lista
         itens.add(item);
         quantidade.add(qtd_item);
         precos.add(preco);
@@ -61,6 +58,6 @@ public class ListaDeCompras{
     }
 
     public String toString(){
-        return "Valor final da compra: " + calcular(preco, qtd_item);
+        return "Valor final da compra: " + calcular(preco, qtd_item) + itens.toString();
     }
 }
